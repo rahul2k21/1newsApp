@@ -12,6 +12,22 @@ import { CiGlobe } from "react-icons/ci";
 import { IoMdContact } from "react-icons/io";
 
 const Index = () => {
+
+
+const navItems = [
+  { navTitle: "स्पोर्ट्स" },
+  { navTitle: "पढ़िए" },
+  { navTitle: "ऑडियोज़" },
+  { navTitle: "विज़ुअल स्टोरीज़" },
+  { navTitle: "सेहत" },
+  { navTitle: "शोज़" },
+  { navTitle: "साइंसकारी" },
+  { navTitle: "न्यूज़" },
+  { navTitle: "एंटरटेनमेंट" },
+  { navTitle: "मौसम" },
+];
+
+
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -70,51 +86,17 @@ const Index = () => {
         }`}
       >
         <div className="flex justify-center">
+          <CgMenuLeftAlt className="text-pink-600 text-3xl" />
           <ul className="flex flex-wrap justify-around items-center gap-x-4">
-            <li className="px-2">
-              <span>
-                <CgMenuLeftAlt className="text-pink-600 text-4xl" />
-              </span>
-            </li>
-            <li className="px-2">
-              <span className="hover:text-pink-600 hover:font-bold">
-                स्पोर्ट्स
-              </span>
-            </li>
-            <li className="px-2">
-              <span className="hover:text-pink-600 hover:font-bold">पढ़िए</span>
-            </li>
-            <li className="px-2">
-              <span className="hover:text-pink-600 hover:font-bold">
-                ऑडियोज़
-              </span>
-            </li>
-            <li className="px-2">
-              <span className="hover:text-pink-600 hover:font-bold">
-                विज़ुअल स्टोरीज़
-              </span>
-            </li>
-            <li className="px-2">
-              <span className="hover:text-pink-600 hover:font-bold">शोज़</span>
-            </li>
-            <li className="px-2">
-              <span className="hover:text-pink-600 hover:font-bold">
-                लल्लनख़ास
-              </span>
-            </li>
-            <li className="px-2">
-              <span className="hover:text-pink-600 hover:font-bold">
-                न्यूज़
-              </span>
-            </li>
-            <li className="px-2">
-              <span className="hover:text-pink-600 hover:font-bold">
-                एंटरटेनमेंट
-              </span>
-            </li>
-            <li className="px-2">
-              <span className="hover:text-pink-600 hover:font-bold">मौसम</span>
-            </li>
+            {navItems.map((item, index) => (
+              <li key={index} className="px-2">
+                <span>
+                  <span className="hover:text-pink-600 hover:font-bold">
+                    {item.navTitle}
+                  </span>
+                </span>
+              </li>
+            ))}
             <li className="px-2">
               <span>
                 <IoSearch className="text-pink-600 text-3xl" />
@@ -131,9 +113,7 @@ const Index = () => {
             <li className="px-2">
               <span className="text-pink-600 font-bold">लॉगिन करें</span>
             </li>
-            <li className="px-2">
-              <span className="text-pink-600 font-bold">सेहत</span>
-            </li>
+          
             <li className="px-2">
               <span>
                 <IoMdContact className="text-pink-600 text-3xl" />
