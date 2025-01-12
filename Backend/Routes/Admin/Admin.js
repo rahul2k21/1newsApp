@@ -8,5 +8,4 @@ router
   .put(AdminController.UpdateSettings)
   .get(AdminController.GetSettings);
 
-
 module.exports = router;
