@@ -4,6 +4,10 @@ import Navbar from "@/components/Home/Navbar/index";
 import LatestVideo from "@/components/Home/LatestVideo/LatestVideo";
 import VisualStudies from "@/components/Home/VisualStudies/VisualStudies";
 import News from "@/components/Home/News/News";
+import Chunav from "@/components/Home/Chunav/Chunav";
+import Sports from "@/components/Home/Sports/Soprts";
+import Technology from "@/components/Home/Technology/Technology";
+import Entertainment from "@/components/Home/Entertainment/Entertainment";
 
 
 export default function Home() {
@@ -16,6 +20,10 @@ export default function Home() {
       <VisualStudies />
       <Advertis />
       <News />
+      <Chunav />
+      <Sports />
+      <Technology />
+      <Entertainment />
     </div>
   );
 }
