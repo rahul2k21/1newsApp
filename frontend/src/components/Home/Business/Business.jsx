@@ -6,7 +6,7 @@ import calld from "../../../../public/images/calld.webp";
 import { FaAngleRight } from "react-icons/fa6";
 import familymurder from "../../../../public/images/familymurder.webp";
 
-function Sports() {
+function Business() {
   const cardDataList = [
     {
       cardImg: calld,
@@ -49,7 +49,7 @@ function Sports() {
               <span className="text-2xl">
                 <IoNewspaperOutline />
               </span>
-              स्पोर्ट्स
+              बिज़नेस
             </li>
             <li className="text-slate-600 text-1xl font-bold flex gap-2 justify-center items-center">
               और देखेंं
@@ -127,4 +127,4 @@ function Sports() {
   );
 }
 
-export default Sports;
+export default Business;

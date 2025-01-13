@@ -1,0 +1,17 @@
+.slick-prev, .slick-next {
+  font-size: 10px;
+  width: none;
+  height: none; 
+  line-height: 50px;
+  background-color: rgba(239, 37, 37, 0.5); 
+  border-radius: 50%;
+}
+
+
+/* Optional: change the icon color */
+.slick-prev:before, .slick-next:before {
+  color: #292929;
+  font-size: 40px; 
+}
+
+

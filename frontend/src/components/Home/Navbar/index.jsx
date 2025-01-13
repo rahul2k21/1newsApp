@@ -4,29 +4,41 @@ import applogo from "../../../../public/images/applogo.webp";
 import Logo from "../../../../public/images/logo.png";
 import { RxHome } from "react-icons/rx";
 import { IoReaderOutline } from "react-icons/io5";
+import { FaCheckCircle, FaCar, FaGlobe, FaUserFriends } from "react-icons/fa";
 import { IoHeadsetOutline } from "react-icons/io5";
 import { BiVideoRecording } from "react-icons/bi";
 import { CgMenuLeftAlt } from "react-icons/cg";
 import { IoSearch } from "react-icons/io5";
 import { CiGlobe } from "react-icons/ci";
+import { RiContactsLine } from "react-icons/ri";
+import { IoIosContact } from "react-icons/io";
 import { IoMdContact } from "react-icons/io";
+import { HiDotsHorizontal } from "react-icons/hi";
+// import { FaCheckCircle } from "react-icons/fa";
 
 const Index = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
+  const toggleSidebar = () => {
+    setIsSidebarOpen((prev) => !prev);
+  };
 
-const navItems = [
-  { navTitle: "स्पोर्ट्स" },
-  { navTitle: "पढ़िए" },
-  { navTitle: "ऑडियोज़" },
-  { navTitle: "विज़ुअल स्टोरीज़" },
-  { navTitle: "सेहत" },
-  { navTitle: "शोज़" },
-  { navTitle: "साइंसकारी" },
-  { navTitle: "न्यूज़" },
-  { navTitle: "एंटरटेनमेंट" },
-  { navTitle: "मौसम" },
-];
+  const toggleList = () => {
+    setIsOpen(!isOpen);
+  };
 
+  const navItems = [
+    { navTitle: "स्पोर्ट्स" },
+    { navTitle: "पढ़िए" },
+    { navTitle: "ऑडियोज़" },
+    { navTitle: "विज़ुअल स्टोरीज़" },
+    { navTitle: "शोज़" },
+    { navTitle: "साइंसकारी" },
+    { navTitle: "न्यूज़" },
+    { navTitle: "एंटरटेनमेंट" },
+    { navTitle: "मौसम" },
+  ];
 
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -80,13 +92,17 @@ const navItems = [
       </div>
 
       {/* Second Div */}
+
       <div
         className={`shadow-lg bg-slate-50 px-4 w-full h-22 border border-slate-400 ${
           isScrolled ? "fixed top-0 z-50" : "relative"
         }`}
       >
         <div className="flex justify-center">
-          <CgMenuLeftAlt className="text-pink-600 text-3xl" />
+          <button onClick={toggleSidebar} className="p-2">
+            <CgMenuLeftAlt className="text-pink-600 text-3xl" />
+          </button>
+
           <ul className="flex flex-wrap justify-around items-center gap-x-4">
             {navItems.map((item, index) => (
               <li key={index} className="px-2">
@@ -97,6 +113,34 @@ const navItems = [
                 </span>
               </li>
             ))}
+            <li className="px-2">
+              <span onClick={toggleList}>
+                <HiDotsHorizontal className="text-pink-600 text-3xl" />
+              </span>
+              {isOpen && (
+                <ul className="list mt-2 absolute bg-white ">
+                  <li className="text-sm leading-7 w-40 mb-2 p-1 border-b-2 hover:text-pink-600">
+                    पड़ताल
+                  </li>
+                  <li className="text-sm leading-7 w-40 mb-2 p-1 border-b-2 hover:text-pink-600">
+                    रंगरूट
+                  </li>
+                  <li className="text-sm leading-7 w-40 mb-2 p-1 border-b-2 hover:text-pink-600">
+                    देश
+                  </li>
+                  <li className="text-sm leading-7 w-40 mb-2 p-1 border-b-2">
+                    ऑटो
+                  </li>
+                  <li className="text-sm leading-7 w-40 mb-2 p-1 border-b-2 hover:text-pink-600">
+                    बिज़नेस
+                  </li>
+                  <li className="text-sm leading-7 w-40 mb-2 p-1 border-b-2 hover:text-pink-600">
+                    ऑडनारी
+                  </li>
+                </ul>
+              )}
+            </li>
+
             <li className="px-2">
               <span>
                 <IoSearch className="text-pink-600 text-3xl" />
@@ -113,13 +157,85 @@ const navItems = [
             <li className="px-2">
               <span className="text-pink-600 font-bold">लॉगिन करें</span>
             </li>
-          
+
             <li className="px-2">
               <span>
                 <IoMdContact className="text-pink-600 text-3xl" />
               </span>
             </li>
           </ul>
+
+          {/* Sidebar */}
+          <div
+            className={`fixed top-0 left-0 h-full bg-pink-600 text-white shadow-md transition-transform duration-300 ${
+              isSidebarOpen ? "translate-x-0" : "-translate-x-full"
+            }`}
+            style={{ width: "270px" }}
+          >
+            {/* Top Section */}
+            <div className=" p-4 justify-center items-center flex flex-col">
+              <button
+                onClick={toggleSidebar}
+                className="p-1 text-right w-full text-4xl text-white"
+              >
+                &times;
+              </button>
+              <div className="t-sm leading-7  p-1  hover:text-pink-600 justify-center items-center flex flex-col"></div>
+              <span>
+                <div className="bg-slate-300 rounded-full p-4 flex items-center justify-center">
+                  <IoIosContact className="text-4xl" />
+                </div>
+                लॉगिन करें
+              </span>
+
+              <ul className="mt-5  flex gap-4">
+                <li className="text-sm leading-7 mb-2 p-1  hover:text-pink-600 justify-center items-center flex flex-col">
+                  <div className="bg-slate-300 rounded-full p-4 flex items-center justify-center">
+                    <RiContactsLine className="text-4xl" />
+                  </div>
+                  बुकमार्क्स
+                </li>
+                <li className="text-sm leading-7 mb-2 p-1  hover:text-pink-600 justify-center items-center flex flex-col">
+                  <div className="bg-slate-300 rounded-full p-4 flex items-center justify-center">
+                    <RiContactsLine className="text-4xl" />
+                  </div>
+                  बुकमार्क्स
+                </li>
+                <li className="text-sm leading-7 mb-2 p-1  hover:text-pink-600 justify-center items-center flex flex-col">
+                  <div className="bg-slate-300 rounded-full p-4 flex items-center justify-center">
+                    <RiContactsLine className="text-4xl" />
+                  </div>
+                  बुकमार्क्स
+                </li>
+              </ul>
+            </div>
+
+            {/* Bottom Section */}
+            <div className="text-md font-bold flex flex-col bg-white text-black p-1 mt-2">
+              <ul className="w-full flex flex-col space-y-3">
+                <li className="leading-7 p-2 border-b-2 w-full flex items-center gap-3">
+                  <FaCheckCircle className="text-blue-500 text-4xl" />
+                 
+                  पड़ताल
+                </li>
+                <li className="leading-7 p-2 border-b-2 w-full flex items-center gap-3">
+                  <FaUserFriends className="text-green-500 text-4xl" />
+              
+                  रंगरूट
+                </li>
+                <li className="leading-7 p-2 border-b-2 w-full flex items-center gap-3">
+                  <FaGlobe className="text-red-500 text-4xl" />
+                
+                  देश
+                </li>
+                <li className="leading-7 p-2 border-b-2 w-full flex items-center gap-3">
+                  <FaCar className="text-yellow-500 text-4xl"  />
+                
+                  ऑटो
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </>

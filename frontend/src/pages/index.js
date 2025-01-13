@@ -8,6 +8,10 @@ import Chunav from "@/components/Home/Chunav/Chunav";
 import Sports from "@/components/Home/Sports/Soprts";
 import Technology from "@/components/Home/Technology/Technology";
 import Entertainment from "@/components/Home/Entertainment/Entertainment";
+import Auto from "@/components/Home/Auto/Auto";
+import Business from "@/components/Home/Business/Business";
+import ThumbBlock from "@/components/Home/ThumbBlock/ThumbBlock";
+import Footer from "@/components/Home/Footer/Footer";
 
 
 export default function Home() {
@@ -24,6 +28,10 @@ export default function Home() {
       <Sports />
       <Technology />
       <Entertainment />
+      <Auto />
+      <Business />
+      <ThumbBlock />
+      <Footer/>
     </div>
   );
 }
