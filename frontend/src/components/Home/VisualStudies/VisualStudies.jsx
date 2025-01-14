@@ -58,7 +58,7 @@ function VisualStudies() {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 4,
           slidesToScroll: 1,
           centerPadding: "10px",
         },
@@ -76,16 +76,16 @@ function VisualStudies() {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          centerPadding: "20px",
+          centerPadding: "10px",
         },
       },
     ],
   };
 
   return (
-    <div className="bg-white p-14">
+    <div className="bg-white p-6 mb-10">
       <div>
-        <ul className="flex justify-between p-2 mb-2">
+        <ul className="flex justify-between p-2 mb-4">
           <li className="text-pink-600 text-2xl font-bold flex gap-2 justify-center items-center">
             <span className="text-2xl">
               <MdOutlinePermContactCalendar />
@@ -116,7 +116,7 @@ function VisualStudies() {
               width={100}
             />
             <div className="p-2">
-              <p className="text-pink-600 text-xs font-semibold mb-3">हेल्थ</p>
+              <p className="text-pink-600 text-xs font-semibold mb-3 ">हेल्थ</p>
               <p className="font-bold text-sm ">{item.cardTitle}</p>
             </div>
           </div>

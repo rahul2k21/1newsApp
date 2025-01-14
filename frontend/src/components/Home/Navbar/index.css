@@ -1,0 +1,25 @@
+@media (max-width: 1080px) {
+    .nav-container{
+        justify-content: start;
+        background: #d9368b;
+        height: 70px;
+    }
+  .nav-item-hide {
+    display: none;
+  }
+  .list-item-font {
+    font-size: 12px;
+  }
+}
+
+
+@media (max-width: 1080px) {
+ 
+  .list-item-font {
+    font-size: 10px;
+  }
+  .nav-list-items{
+    gap: unset;
+    justify-content: unset;
+  }
+}

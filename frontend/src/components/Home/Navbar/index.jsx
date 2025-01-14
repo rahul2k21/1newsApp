@@ -14,7 +14,7 @@ import { RiContactsLine } from "react-icons/ri";
 import { IoIosContact } from "react-icons/io";
 import { IoMdContact } from "react-icons/io";
 import { HiDotsHorizontal } from "react-icons/hi";
-// import { FaCheckCircle } from "react-icons/fa";
+import "./index.css";
 
 const Index = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -60,12 +60,12 @@ const Index = () => {
   return (
     <>
       {/* First Div */}
-      <div className="shadow-lg justify-around items-center flex bg-slate-50 pl-4 pr-4 w-full z-20 top-0 left-0 right-0 h-22">
+      <div className="nav-container shadow-lg justify-around items-center flex bg-slate-50 pl-4 pr-4 w-full z-20 top-0 left-0 right-0 h-22">
         <div>
           <Image src={Logo} height={100} width={95} alt="Logo" />
         </div>
 
-        <div>
+        <div className="nav-item-hide">
           <ul className="flex border border-slate-400 rounded-lg">
             <li className="flex items-center bg-pink-600 gap-6 border-r px-12 rounded-l-lg py-2 border-gray-600 text-white">
               <RxHome />
@@ -86,7 +86,7 @@ const Index = () => {
           </ul>
         </div>
 
-        <div>
+        <div className="nav-item-hide">
           <Image src={applogo} height={200} width={350} alt="App Logo" />
         </div>
       </div>
@@ -98,12 +98,12 @@ const Index = () => {
           isScrolled ? "fixed top-0 z-50" : "relative"
         }`}
       >
-        <div className="flex justify-center">
+        <div className="flex justify-center list-item-font">
           <button onClick={toggleSidebar} className="p-2">
             <CgMenuLeftAlt className="text-pink-600 text-3xl" />
           </button>
 
-          <ul className="flex flex-wrap justify-around items-center gap-x-4">
+          <ul className="flex flex-wrap justify-around items-center gap-x-4 nav-list-items">
             {navItems.map((item, index) => (
               <li key={index} className="px-2">
                 <span>
@@ -113,7 +113,7 @@ const Index = () => {
                 </span>
               </li>
             ))}
-            <li className="px-2">
+            <li className="px-2 nav-item-hide">
               <span onClick={toggleList}>
                 <HiDotsHorizontal className="text-pink-600 text-3xl" />
               </span>
@@ -141,29 +141,31 @@ const Index = () => {
               )}
             </li>
 
-            <li className="px-2">
+            <li className="px-2 nav-item-hide ">
               <span>
                 <IoSearch className="text-pink-600 text-3xl" />
               </span>
             </li>
-            <li className="px-2">
+            <li className="px-2 nav-item-hide">
               <span className="text-pink-600 font-bold">हिंदी</span>
             </li>
-            <li className="px-2">
+            <li className="px-2 nav-item-hide">
               <span>
                 <CiGlobe className="text-pink-600 text-3xl" />
               </span>
             </li>
-            <li className="px-2">
+            <li className="px-2 nav-item-hide">
               <span className="text-pink-600 font-bold">लॉगिन करें</span>
             </li>
 
-            <li className="px-2">
+            <li className="px-2 nav-item-hide">
               <span>
                 <IoMdContact className="text-pink-600 text-3xl" />
               </span>
             </li>
           </ul>
+
+
 
           {/* Sidebar */}
           <div
@@ -215,22 +217,18 @@ const Index = () => {
               <ul className="w-full flex flex-col space-y-3">
                 <li className="leading-7 p-2 border-b-2 w-full flex items-center gap-3">
                   <FaCheckCircle className="text-blue-500 text-4xl" />
-                 
                   पड़ताल
                 </li>
                 <li className="leading-7 p-2 border-b-2 w-full flex items-center gap-3">
                   <FaUserFriends className="text-green-500 text-4xl" />
-              
                   रंगरूट
                 </li>
                 <li className="leading-7 p-2 border-b-2 w-full flex items-center gap-3">
                   <FaGlobe className="text-red-500 text-4xl" />
-                
                   देश
                 </li>
                 <li className="leading-7 p-2 border-b-2 w-full flex items-center gap-3">
-                  <FaCar className="text-yellow-500 text-4xl"  />
-                
+                  <FaCar className="text-yellow-500 text-4xl" />
                   ऑटो
                 </li>
               </ul>

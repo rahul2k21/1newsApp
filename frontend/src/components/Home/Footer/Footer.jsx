@@ -7,12 +7,16 @@ import { TbBrandYoutube } from "react-icons/tb";
 import { GrAndroid } from "react-icons/gr";
 import { AiFillTwitterCircle } from "react-icons/ai";
 import { FaApple } from "react-icons/fa";
+import "./Footer.css";
 
 function Footer() {
   return (
-    <div className="w-full pb-12 pt-10 bg-white">
-      <div style={{ background: "#016369" }} className="p-7 flex w-full">
-        <div className="p-4 ">
+    <div className="w-full pb-8 pt-8 bg-white">
+      <div
+        style={{ background: "#016369" }}
+        className="p-7 flex w-full card-content-footer"
+      >
+        <div className="p-4  ">
           <div className="flex w-full mb-2 justify-center ">
             <Image src={Logo} alt="logofooter" width={140} />
           </div>
@@ -85,17 +89,18 @@ function Footer() {
               </li>
             </ul>
 
-            <span className="text-white mt-10 text-sm">
+            <span className="text-white mt-10 text-sm ">
               @ 2025 LALLANTOP. All rights reserved.
             </span>
           </div>
         </div>
 
+
         <div className="w-full">
-          <div className="p-2 flex gap-2 w-full justify-around ">
+          <div className="p-2 flex gap-2 w-full justify-around row-item-footer">
             <div>
               <ul className="mb-4 text-slate-300 text-sm leading-normal cursor-pointer ">
-                <h2 className="text-white text-xl font-semibold mb-2">
+                <h2 className="text-white text-xl font-semibold mb-2 ">
                   LallanKhas News
                 </h2>
                 <li className="">Hindi Satire & Humor</li>
@@ -113,7 +118,7 @@ function Footer() {
             </div>
             <div>
               <ul className="mb-4 text-slate-300  text-sm leading-normal cursor-pointer">
-                <h2 className="text-white text-lg mb-2 font-semibold">
+                <h2 className="text-white text-lg mb-2 font-semibold ">
                   Education News
                 </h2>
                 <li className="hover:text-white">Hindi Satire & Humor</li>
@@ -126,7 +131,7 @@ function Footer() {
             </div>
             <div>
               <ul className="mb-4 text-slate-300  text-sm leading-normal cursor-pointer">
-                <h2 className="text-white text-lg mb-2 font-semibold">
+                <h2 className="text-white text-lg mb-2 font-semibold ">
                   Fact News
                 </h2>
                 <li className="hover:text-white">Hindi Satire & Humor</li>
@@ -139,7 +144,7 @@ function Footer() {
             </div>
             <div>
               <ul className="mb-4 text-slate-300  text-sm leading-normal cursor-pointer ">
-                <h2 className="text-white text-lg mb-2 font-semibold">
+                <h2 className="text-white text-lg mb-2 font-semibold ">
                   Election News
                 </h2>
                 <li className="hover:text-white">Hindi Satire & Humor</li>
@@ -152,7 +157,7 @@ function Footer() {
             </div>
             <div>
               <ul className=" text-slate-300  text-sm leading-normal cursor-pointer">
-                <h2 className="text-white text-lg mb-2 font-semibold">
+                <h2 className="text-white text-lg mb-2 font-semibold ">
                   Odadnaari News
                 </h2>
                 <li className="hover:text-white">Hindi Satire & Humor</li>
@@ -165,10 +170,10 @@ function Footer() {
             </div>
           </div>
 
-          <div className="p-2 flex gap-2 w-full justify-around ">
+          <div className="p-2 flex gap-2 w-full justify-around  row-item-footer">
             <div>
               <ul className="mb-4 text-slate-300 text-sm leading-normal cursor-pointer">
-                <h2 className="text-white text-lg mb-2 font-semibold">
+                <h2 className="text-white text-lg mb-2 font-semibold ">
                   Election News
                 </h2>
                 <li className="hover:text-white">Hindi Satire & Humor</li>
@@ -181,7 +186,7 @@ function Footer() {
             </div>
             <div>
               <ul className="mb-4 text-slate-300  text-sm leading-normal cursor-pointer">
-                <h2 className="text-white text-lg mb-2 font-semibold">
+                <h2 className="text-white text-lg mb-2 font-semibold ">
                   Entertainment News
                 </h2>
                 <li className="hover:text-white">Hindi Satire & Humor</li>
@@ -194,7 +199,7 @@ function Footer() {
             </div>
             <div>
               <ul className="mb-4 text-slate-300  text-sm leading-normal cursor-pointer">
-                <h2 className="text-white text-lg mb-2 font-semibold">
+                <h2 className="text-white text-lg mb-2 font-semibold ">
                   Business News
                 </h2>
                 <li className="hover:text-white">Hindi Satire & Humor</li>
@@ -207,7 +212,7 @@ function Footer() {
             </div>
             <div>
               <ul className="mb-4 text-slate-300  text-sm leading-normal cursor-pointer">
-                <h2 className="text-white text-lg  font-semibold mb-2">
+                <h2 className="text-white text-lg  font-semibold mb-2 ">
                   Technology News
                 </h2>
                 <li className="hover:text-white">Hindi Satire & Humor</li>
@@ -220,7 +225,7 @@ function Footer() {
             </div>
             <div>
               <ul className=" text-slate-300  text-sm leading-normal cursor-pointer">
-                <h2 className="text-white text-lg font-semibold mb-2">
+                <h2 className="text-white text-lg font-semibold mb-2 ">
                   Top News
                 </h2>
                 <li className="hover:text-white">Hindi Satire & Humor</li>
@@ -233,9 +238,9 @@ function Footer() {
             </div>
           </div>
 
-          <div className="p-2 flex gap-2 w-full justify-start">
+          <div className="p-2 flex gap-2 w-full justify-start row-item-footer">
             <div className="pl-4 text-slate-300 text-sm leading-normal ">
-              <h2 className="text-white text-lg mb-2 font-semibold ">
+              <h2 className="text-white text-lg mb-2 font-semibold  ">
                 Quick Links
               </h2>
               <div className="flex justify-between gap-28">

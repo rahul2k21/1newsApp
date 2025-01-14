@@ -1,0 +1,32 @@
+@media (max-width: 1080px) {
+  .card-content-technology {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+  .card-span-technology {
+    font-size: 20px;
+    line-height: 40px;
+  }
+  .card-img-technology{
+    width: 220px;
+
+  }
+}
+
+
+
+@media (max-width: 576px) {
+  .card-span-technology {
+    font-size: 16px;
+    line-height: 20px;
+  }
+    .card-title-technology {
+    font-size: 14px;
+   
+  }
+  .card-img-technology{
+    width: 220px;
+
+  }
+}

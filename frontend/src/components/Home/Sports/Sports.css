@@ -1,0 +1,33 @@
+@media (max-width: 1080px) {
+  .card-content-sports {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+  .card-span-sports {
+    font-size: 20px;
+    line-height: 40px;
+  }
+  .card-img-sports{
+    width: 220px;
+
+  }
+}
+
+
+
+@media (max-width: 576px) {
+ 
+  .card-span-sports {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .card-title-sports {
+    font-size: 14px;
+  }
+  .card-img-sports{
+    width: 220px;
+
+  }
+}
+

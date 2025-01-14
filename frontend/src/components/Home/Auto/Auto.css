@@ -1,0 +1,28 @@
+@media (max-width: 1080px) {
+  .card-content-auto {
+    width: 100%;
+  }
+  .card-span-auto {
+    font-size: 20px;
+    line-height: 40px;
+    margin-top: 20px;
+  }
+
+  .card-img-auto {
+    width: 220px;
+  }
+}
+
+@media (max-width: 576px) {
+  .card-span-auto {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .card-title-auto {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .card-img-auto {
+    width: 180px;
+  }
+}

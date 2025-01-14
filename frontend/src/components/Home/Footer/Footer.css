@@ -1,0 +1,28 @@
+@media (max-width: 1080px) {
+  .card-content-footer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 576) {
+  .card-content-footer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    padding: 4px;
+  }
+
+  .card-item-footer {
+    display: flex;
+  }
+
+  .footer-span {
+    display: none;
+  }
+  .row-item-footer {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+}

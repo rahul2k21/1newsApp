@@ -1,0 +1,15 @@
+@media (max-width: 1080px) {
+  .nav-item-hide {
+    display: none;
+  }
+  .list-item-font {
+    font-size: 12px;
+  }
+}
+
+
+@media (max-width: 576px) {
+   .card-title-banner{
+    font-size: 14px;
+   }
+}

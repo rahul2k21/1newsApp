@@ -1,11 +1,11 @@
 import React from "react";
 import Image from "next/image";
-import movideReview from "../../../../public/images/movideReview.webp";
 import donaldtrump from "../../../../public/images/donaldtrump.webp";
 import { IoNewspaperOutline } from "react-icons/io5";
 import calld from "../../../../public/images/calld.webp";
 import { FaAngleRight } from "react-icons/fa6";
 import familymurder from "../../../../public/images/familymurder.webp";
+import './News.css';
 
 function News() {
   const cardDataList = [
@@ -42,10 +42,10 @@ function News() {
   ];
 
   return (
-    <div className="p-14 bg-white">
+    <div className="p-6 bg-white">
       <div>
         <div>
-          <ul className="flex w-2/3 justify-between p-2 mb-2 cursor-pointer">
+          <ul className="nav-item-header  flex w-2/3 justify-between p-2 mb-2 cursor-pointer">
             <li className="text-teal-800  text-2xl font-bold flex  gap-2 justify-center items-center">
               <span className="text-2xl">
                 <IoNewspaperOutline />
@@ -61,24 +61,24 @@ function News() {
           </ul>
         </div>
 
-        <div className="flex flex-col  ">
-          <div className="w-2/3 flex gap-9 mb-4">
+        <div className="flex flex-col ">
+          <div className="w-2/3 flex gap-9 mb-4 nav-item-news-img">
             <div>
               <Image
-                className="mb-2 cursor-pointer w-full"
+                className="mb-2 cursor-pointer w-full "
                 src={donaldtrump}
                 height={400}
                 width={300}
                 alt="Fatafat"
               />
-              <p className="text-black font-bold">
+              <p className="text-black font-bold news-card-span">
                 शपथ से ऐन पहले 'हश मनी' केस में ट्रंप को बड़ी राहत, दोषी साबित
                 होने के बावजूद सजा से बच गए
               </p>
             </div>
-            <div>
+            <div className="nav-item-img-hide">
               <Image
-                className="mb-2 cursor-pointer w-full"
+                className="mb-2 cursor-pointer w-full "
                 src={familymurder}
                 height={400}
                 width={300}
@@ -92,17 +92,17 @@ function News() {
           </div>
 
           <div className="w-full">
-            <ul className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <ul className="grid grid-cols-1 sm:grid-cols-3 gap-4 nav-item-news-list">
               {cardDataList.map((item, index) => (
-                <li key={index} className="flex flex-row gap-2 p-2 rounded-md">
+                <li key={index} className="flex flex-row gap-2  rounded-md">
                   <Image
                     src={item.cardImg}
                     height={100}
                     width={120}
-                    className="rounded-md cursor-pointer"
+                    className="rounded-md cursor-pointer news-card-img"
                     alt={item.cardTitle}
                   />
-                  <span className="text-sm font-bold text-black cursor-pointer">
+                  <span className="text-sm font-bold text-black cursor-pointer news-title-span">
                     {item.cardTitle}
                   </span>
                 </li>

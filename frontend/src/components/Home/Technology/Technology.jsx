@@ -5,6 +5,7 @@ import { IoNewspaperOutline } from "react-icons/io5";
 import calld from "../../../../public/images/calld.webp";
 import { FaAngleRight } from "react-icons/fa6";
 import familymurder from "../../../../public/images/familymurder.webp";
+import "./Technology.css";
 
 function Technology() {
   const cardDataList = [
@@ -41,7 +42,7 @@ function Technology() {
   ];
 
   return (
-    <div className="p-14 bg-white">
+    <div className="p-6 bg-white">
       <div>
         <div>
           <ul className="flex w-full justify-between p-2 mb-2 cursor-pointer">
@@ -60,8 +61,8 @@ function Technology() {
           </ul>
         </div>
 
-        <div className="flex flex-col  ">
-          <div className="w-full flex gap-9 mb-4">
+        <div className="flex flex-col   ">
+          <div className="w-full flex gap-9 mb-4 card-content-technology card-span-technology">
             <div>
               <Image
                 className="mb-2 cursor-pointer w-full"
@@ -104,17 +105,17 @@ function Technology() {
           </div>
 
           <div className="w-full">
-            <ul className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <ul className="grid grid-cols-1 sm:grid-cols-3 gap-4 card-content-technology">
               {cardDataList.map((item, index) => (
-                <li key={index} className="flex flex-row gap-2 p-2 rounded-md">
+                <li key={index} className="flex flex-row gap-2  rounded-md">
                   <Image
                     src={item.cardImg}
                     height={100}
                     width={120}
-                    className="rounded-md cursor-pointer"
+                    className="rounded-md cursor-pointer card-img-technology"
                     alt={item.cardTitle}
                   />
-                  <span className="text-sm font-bold text-black cursor-pointer">
+                  <span className="text-sm font-bold text-black cursor-pointer card-title-technology">
                     {item.cardTitle}
                   </span>
                 </li>
