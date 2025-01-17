@@ -40,10 +40,10 @@ function Banner() {
   ];
 
   return (
-    <div className="bg-white flex justify-around p-6">
-      <div className="w-96 ">
+    <div className=" bg-white flex justify-around p-6">
+      <div className="w-96 smalldevicewidth">
         <Image
-          className="rounded-t-md mb-4 cursor-pointer"
+          className="rounded-t-md mb-4 cursor-pointer smalldevicewidth"
           src={BannerImg}
           height={100}
           width={400}
@@ -52,7 +52,6 @@ function Banner() {
         <ul>
           <div className="flex flex-col gap-4 cursor-pointer">
             {cardDataList.slice(0, 4).map((item, index) => (
-
               <div key={index} className="flex gap-1  items-start bg-white">
                 <Image
                   className="rounded-md"

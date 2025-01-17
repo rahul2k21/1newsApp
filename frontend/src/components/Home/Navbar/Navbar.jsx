@@ -14,7 +14,8 @@ import { RiContactsLine } from "react-icons/ri";
 import { IoIosContact } from "react-icons/io";
 import { IoMdContact } from "react-icons/io";
 import { HiDotsHorizontal } from "react-icons/hi";
-import "./index.css";
+import "./Navbar.css";
+import TabBar from "./TabBar";
 
 const Index = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -91,13 +92,14 @@ const Index = () => {
         </div>
       </div>
 
+
+
+
       {/* Second Div */}
 
-      <div
-        className={`shadow-lg bg-slate-50 px-4 w-full h-22 border border-slate-400 ${
+      <div className={`shadow-lg bg-slate-50 px-4 w-full h-22 border border-slate-400 ${
           isScrolled ? "fixed top-0 z-50" : "relative"
-        }`}
-      >
+        }`} >
         <div className="flex justify-center list-item-font">
           <button onClick={toggleSidebar} className="p-2">
             <CgMenuLeftAlt className="text-pink-600 text-3xl" />
@@ -165,15 +167,15 @@ const Index = () => {
             </li>
           </ul>
 
-
-
           {/* Sidebar */}
           <div
-            className={`fixed top-0 left-0 h-full bg-pink-600 text-white shadow-md transition-transform duration-300 ${
+            className={`smalldevice fixed top-0 left-0 h-full bg-pink-600 text-white shadow-md transition-transform duration-300 ${
               isSidebarOpen ? "translate-x-0" : "-translate-x-full"
             }`}
-            style={{ width: "270px" }}
+            style={{ width: "275px" }}
           >
+
+
             {/* Top Section */}
             <div className=" p-4 justify-center items-center flex flex-col">
               <button
@@ -236,6 +238,9 @@ const Index = () => {
           </div>
         </div>
       </div>
+
+
+      <TabBar  />
     </>
   );
 };

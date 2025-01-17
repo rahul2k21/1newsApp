@@ -8,8 +8,12 @@
 }
 
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
    .card-title-banner{
     font-size: 14px;
+    text-align: justify;
+   }
+   .smalldevicewidth{
+    width: 100%;
    }
 }
