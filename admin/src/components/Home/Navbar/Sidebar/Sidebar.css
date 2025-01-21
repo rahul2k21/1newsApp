@@ -1,0 +1,9 @@
+/* Hide scrollbar while keeping content scrollable */
+.sidebar-scrollable::-webkit-scrollbar {
+  display: none;
+}
+
+.sidebar-scrollable {
+  -ms-overflow-style: none;  
+  scrollbar-width: none;    
+}

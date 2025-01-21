@@ -1,0 +1,69 @@
+import React, { useState } from "react";
+import { CgMenu } from "react-icons/cg";
+import Image from "next/image";
+import logo from "../../../../public/Images/logo.png";
+import { AiOutlineDashboard } from "react-icons/ai";
+import { FaUserAlt, FaCog, FaEnvelope, FaSignOutAlt } from "react-icons/fa";
+
+const sidebarData = [
+  { id: 1, title: "Dashboard", icon: <AiOutlineDashboard /> },
+  { id: 2, title: "Profile", icon: <FaUserAlt /> },
+  { id: 3, title: "Settings", icon: <FaCog /> },
+  { id: 4, title: "Messages", icon: <FaEnvelope /> },
+  { id: 5, title: "Logout", icon: <FaSignOutAlt /> },
+];
+
+const Navbar = () => {
+  const [isSidebarExpanded, setIsSidebarExpanded] = useState(false);
+
+  const handleSidebarToggle = () => {
+    setIsSidebarExpanded((prev) => !prev);
+  };
+
+  return (
+    <div className="flex h-screen">
+      {/* Sidebar */}
+      <div
+        className={`bg-slate-800 text-white h-full transition-all duration-300 ${
+          isSidebarExpanded ? "w-64" : "w-16"
+        }`}
+      >
+        <div className="flex justify-center border-b-2 border-gray-700 ">
+          <Image src={logo} alt="App Logo" width={55} height={50} />
+        </div>
+
+        <ul className="space-y-4 px-4 mt-4">
+          {sidebarData.map((item) => (
+            <li
+              key={item.id}
+              className={`flex items-center p-3 rounded-md hover:bg-slate-700 cursor-pointer transition ${
+                !isSidebarExpanded ? "justify-center" : ""
+              }`}
+            >
+              <span className="text-2xl">{item.icon}</span>
+              {isSidebarExpanded && (
+                <span className="ml-3 text-sm font-medium">{item.title}</span>
+              )}
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {/* Navbar */}
+      <div className="flex-1">
+        <nav className="bg-slate-900 text-white p-4">
+          <div className="font-bold text-2xl flex items-center justify-between">
+            <button
+              className="text-white text-2xl"
+              onClick={handleSidebarToggle}
+            >
+              <CgMenu />
+            </button>
+          </div>
+        </nav>
+      </div>
+    </div>
+  );
+};
+
+export default Navbar;
