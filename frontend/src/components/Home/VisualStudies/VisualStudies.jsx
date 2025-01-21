@@ -84,7 +84,7 @@ function VisualStudies() {
   };
 
   return (
-    <div className="bg-white p-6 mb-10">
+    <div className="bg-white p-6 mb-10 overflow-hidden">
       <div>
         <ul className="flex justify-between p-2 mb-4">
           <li className="text-pink-600 text-2xl font-bold flex gap-2 justify-center items-center">
@@ -102,27 +102,25 @@ function VisualStudies() {
         </ul>
       </div>
 
-      <Slider {...settings}>
-        {cardDataList.map((item, index) => (
-          <div
-            className=" rounded shadow-md overflow-hidden p-2 mx-2"
-            key={index}
-          >
-            <Image
-              src={item.cardImg}
-              alt={item.cardTitle}
-              className="w-full h-30"
-              layout="responsive"
-              height={100}
-              width={100}
-            />
-            <div className="p-2">
-              <p className="text-pink-600 text-xs font-semibold mb-3 ">हेल्थ</p>
-              <p className="font-bold text-sm ">{item.cardTitle}</p>
-            </div>
-          </div>
-        ))}
-      </Slider>
+     <Slider {...settings} className="slider-container">
+  {cardDataList.map((item, index) => (
+    <div className="rounded shadow-md overflow-hidden p-2 mx-2" key={index}>
+      <Image
+        src={item.cardImg}
+        alt={item.cardTitle}
+        className="w-full h-30"
+        layout="responsive"
+        height={100}
+        width={100}
+      />
+      <div className="p-2">
+        <p className="text-pink-600 text-xs font-semibold mb-3 ">हेल्थ</p>
+        <p className="font-bold text-sm ">{item.cardTitle}</p>
+      </div>
+    </div>
+  ))}
+</Slider>
+
     </div>
   );
 }
